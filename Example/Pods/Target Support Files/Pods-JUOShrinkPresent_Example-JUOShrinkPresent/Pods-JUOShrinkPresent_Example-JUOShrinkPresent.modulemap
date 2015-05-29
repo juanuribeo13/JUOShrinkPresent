@@ -1,0 +1,6 @@
+framework module JUOShrinkPresent {
+  umbrella header "Pods-JUOShrinkPresent_Example-JUOShrinkPresent-umbrella.h"
+
+  export *
+  module * { export * }
+}
