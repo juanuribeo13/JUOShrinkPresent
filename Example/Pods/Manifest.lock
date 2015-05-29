@@ -22,7 +22,7 @@ SPEC CHECKSUMS:
   Expecta: 78b4e8b0c8291fa4524d7f74016b6065c2e391ec
   Expecta+Snapshots: 40c5ec43b43da3bae957f14fed5dc9177d08ec8b
   FBSnapshotTestCase: 9d5fe43b29ae3a0ed8fc829477971b281038f748
-  JUOShrinkPresent: cd7f8f6d93413075690f32b6992b9caefd90b4bd
+  JUOShrinkPresent: dac6f9d4cbc276f9b102ad3a46eb6407d4a4af1f
   Specta: 96fe05fe5c7348b5223f85e862904f6e832abb14
 
 COCOAPODS: 0.37.2

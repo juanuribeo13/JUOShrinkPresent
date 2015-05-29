@@ -13,9 +13,6 @@
 		6003F598195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F596195388D20070C39A /* InfoPlist.strings */; };
 		6003F59A195388D20070C39A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F599195388D20070C39A /* main.m */; };
 		6003F59E195388D20070C39A /* JUOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F59D195388D20070C39A /* JUOAppDelegate.m */; };
-		6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F59F195388D20070C39A /* Main_iPhone.storyboard */; };
-		6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A2195388D20070C39A /* Main_iPad.storyboard */; };
-		6003F5A7195388D20070C39A /* JUOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5A6195388D20070C39A /* JUOViewController.m */; };
 		6003F5A9195388D20070C39A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5A8195388D20070C39A /* Images.xcassets */; };
 		6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F5AF195388D20070C39A /* XCTest.framework */; };
 		6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
@@ -23,6 +20,9 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		7BA3DA79565A04E33A85725D /* Pods_JUOShrinkPresent_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB01F9E40A49489EB43EBA5A /* Pods_JUOShrinkPresent_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D3E9C41A1B1917ED002BF8EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E9C4191B1917ED002BF8EA /* Main.storyboard */; };
+		D3E9C41D1B1918C8002BF8EA /* JUORootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E9C41C1B1918C8002BF8EA /* JUORootViewController.m */; };
+		D3E9C4201B191A65002BF8EA /* JUOPresentedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E9C41F1B191A65002BF8EA /* JUOPresentedViewController.m */; };
 		DE94E5CF9790CDEAB01606B4 /* Pods_JUOShrinkPresent_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E65B4614A51C914C31AE7EF2 /* Pods_JUOShrinkPresent_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -40,7 +40,7 @@
 		04F88B092AEA32660A96B662 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		4A99FEB7C0E99622F4F03371 /* JUOShrinkPresent.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JUOShrinkPresent.podspec; path = ../JUOShrinkPresent.podspec; sourceTree = "<group>"; };
 		59093302D86A517CBC774605 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* JUOShrinkPresent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = JUOShrinkPresent.app; path = JUOShrinkPresent_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* JUOShrinkPresent_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JUOShrinkPresent_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -50,12 +50,8 @@
 		6003F59B195388D20070C39A /* JUOShrinkPresent-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JUOShrinkPresent-Prefix.pch"; sourceTree = "<group>"; };
 		6003F59C195388D20070C39A /* JUOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JUOAppDelegate.h; sourceTree = "<group>"; };
 		6003F59D195388D20070C39A /* JUOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JUOAppDelegate.m; sourceTree = "<group>"; };
-		6003F5A0195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		6003F5A3195388D20070C39A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		6003F5A5195388D20070C39A /* JUOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JUOViewController.h; sourceTree = "<group>"; };
-		6003F5A6195388D20070C39A /* JUOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JUOViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = JUOShrinkPresent_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* JUOShrinkPresent_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JUOShrinkPresent_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -65,6 +61,11 @@
 		A078B11A21D51555E657580C /* Pods-JUOShrinkPresent_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JUOShrinkPresent_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JUOShrinkPresent_Example/Pods-JUOShrinkPresent_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A2CB3F71306D6560B2D85B30 /* Pods-JUOShrinkPresent_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JUOShrinkPresent_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JUOShrinkPresent_Tests/Pods-JUOShrinkPresent_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		A4CEC2085BB11912A6DAACA0 /* Pods-JUOShrinkPresent_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JUOShrinkPresent_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JUOShrinkPresent_Tests/Pods-JUOShrinkPresent_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		D3E9C4191B1917ED002BF8EA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D3E9C41B1B1918C8002BF8EA /* JUORootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUORootViewController.h; sourceTree = "<group>"; };
+		D3E9C41C1B1918C8002BF8EA /* JUORootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUORootViewController.m; sourceTree = "<group>"; };
+		D3E9C41E1B191A65002BF8EA /* JUOPresentedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JUOPresentedViewController.h; sourceTree = "<group>"; };
+		D3E9C41F1B191A65002BF8EA /* JUOPresentedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JUOPresentedViewController.m; sourceTree = "<group>"; };
 		E65B4614A51C914C31AE7EF2 /* Pods_JUOShrinkPresent_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JUOShrinkPresent_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB01F9E40A49489EB43EBA5A /* Pods_JUOShrinkPresent_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JUOShrinkPresent_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -100,6 +101,7 @@
 			children = (
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for JUOShrinkPresent */,
+				6003F594195388D20070C39A /* Supporting Files */,
 				6003F5B5195388D20070C39A /* Tests */,
 				6003F58C195388D20070C39A /* Frameworks */,
 				6003F58B195388D20070C39A /* Products */,
@@ -110,8 +112,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* JUOShrinkPresent.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* JUOShrinkPresent_Example.app */,
+				6003F5AE195388D20070C39A /* JUOShrinkPresent_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,12 +136,12 @@
 			children = (
 				6003F59C195388D20070C39A /* JUOAppDelegate.h */,
 				6003F59D195388D20070C39A /* JUOAppDelegate.m */,
-				6003F59F195388D20070C39A /* Main_iPhone.storyboard */,
-				6003F5A2195388D20070C39A /* Main_iPad.storyboard */,
-				6003F5A5195388D20070C39A /* JUOViewController.h */,
-				6003F5A6195388D20070C39A /* JUOViewController.m */,
+				D3E9C4191B1917ED002BF8EA /* Main.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
-				6003F594195388D20070C39A /* Supporting Files */,
+				D3E9C41B1B1918C8002BF8EA /* JUORootViewController.h */,
+				D3E9C41C1B1918C8002BF8EA /* JUORootViewController.m */,
+				D3E9C41E1B191A65002BF8EA /* JUOPresentedViewController.h */,
+				D3E9C41F1B191A65002BF8EA /* JUOPresentedViewController.m */,
 			);
 			name = "Example for JUOShrinkPresent";
 			path = JUOShrinkPresent;
@@ -154,6 +156,7 @@
 				6003F59B195388D20070C39A /* JUOShrinkPresent-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = JUOShrinkPresent;
 			sourceTree = "<group>";
 		};
 		6003F5B5195388D20070C39A /* Tests */ = {
@@ -216,7 +219,7 @@
 			);
 			name = JUOShrinkPresent_Example;
 			productName = JUOShrinkPresent;
-			productReference = 6003F58A195388D20070C39A /* JUOShrinkPresent.app */;
+			productReference = 6003F58A195388D20070C39A /* JUOShrinkPresent_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* JUOShrinkPresent_Tests */ = {
@@ -237,7 +240,7 @@
 			);
 			name = JUOShrinkPresent_Tests;
 			productName = JUOShrinkPresentTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* JUOShrinkPresent_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -279,9 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6003F5A4195388D20070C39A /* Main_iPad.storyboard in Resources */,
+				D3E9C41A1B1917ED002BF8EA /* Main.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
-				6003F5A1195388D20070C39A /* Main_iPhone.storyboard in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,7 +397,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* JUOAppDelegate.m in Sources */,
-				6003F5A7195388D20070C39A /* JUOViewController.m in Sources */,
+				D3E9C41D1B1918C8002BF8EA /* JUORootViewController.m in Sources */,
+				D3E9C4201B191A65002BF8EA /* JUOPresentedViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,22 +428,6 @@
 				6003F597195388D20070C39A /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		6003F59F195388D20070C39A /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5A0195388D20070C39A /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		6003F5A2195388D20070C39A /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6003F5A3195388D20070C39A /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		6003F5B8195388D20070C39A /* InfoPlist.strings */ = {
@@ -535,6 +522,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JUOShrinkPresent/JUOShrinkPresent-Prefix.pch";
 				INFOPLIST_FILE = "JUOShrinkPresent/JUOShrinkPresent-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -550,6 +538,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JUOShrinkPresent/JUOShrinkPresent-Prefix.pch";
 				INFOPLIST_FILE = "JUOShrinkPresent/JUOShrinkPresent-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
