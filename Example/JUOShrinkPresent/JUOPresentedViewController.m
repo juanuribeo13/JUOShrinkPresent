@@ -19,15 +19,21 @@
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (UIStatusBarStyle)preferredStatusBarStyle {
+	return UIStatusBarStyleLightContent;
 }
 
 #pragma mark - IBActions
 
 - (IBAction)dismissPressed:(UIButton *)sender {
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Memory
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 /*

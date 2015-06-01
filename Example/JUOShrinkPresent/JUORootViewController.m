@@ -9,7 +9,7 @@
 #import "JUORootViewController.h"
 #import <JUOShrinkPresent/JUOShrinkTransitioningDelegate.h>
 
-@interface JUORootViewController ()
+@interface JUORootViewController () <JUOShrinkDelegate>
 
 @property (strong, nonatomic) JUOShrinkTransitioningDelegate *shrinkTransitioningDelegate;
 
@@ -21,13 +21,15 @@
     [super viewDidLoad];
 	
 	self.shrinkTransitioningDelegate = [[JUOShrinkTransitioningDelegate alloc] init];
+	self.shrinkTransitioningDelegate.shrinkDelegate = self;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark - JUOShrinkDelegate
 
+- (CGColorRef)presentedWindowColor {
+	
+	return [UIColor colorWithRed:0 green:0.2 blue:0 alpha:1].CGColor;
+}
 
 #pragma mark - Navigation
 
@@ -39,6 +41,13 @@
 		toVC.modalPresentationStyle = UIModalPresentationCustom;
 		toVC.transitioningDelegate = self.shrinkTransitioningDelegate;
 	}
+}
+
+#pragma mark - Memory
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 @end
