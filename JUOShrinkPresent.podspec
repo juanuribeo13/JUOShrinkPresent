@@ -10,21 +10,19 @@
 Pod::Spec.new do |s|
   s.name             = "JUOShrinkPresent"
   s.version          = "0.1.0"
-  s.summary          = "A short description of JUOShrinkPresent."
+  s.summary          = "Custom presentation delegate that shrinks the VC in the back."
   s.description      = <<-DESC
-                       An optional longer description of JUOShrinkPresent
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                        JUOShrinkPresent is a custom presentation delegate that shrinks the ViewController
+                        that stays in the back like the mail app does in iOS8 when composing a new email.
                        DESC
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/JUOShrinkPresent"
+  s.homepage         = "https://github.com/juanuribeo13/JUOShrinkPresent"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Juan Uribe" => "juanuribeo13@gmail.com.co" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/JUOShrinkPresent.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/juanuribeo13/JUOShrinkPresent.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
