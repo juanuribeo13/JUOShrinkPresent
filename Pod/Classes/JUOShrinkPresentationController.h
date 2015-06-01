@@ -6,9 +6,12 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "JUOShrinkTransitioningDelegate.h"
+
 @interface JUOShrinkPresentationController : UIPresentationController
+
+@property (weak, nonatomic) id<JUOShrinkDelegate> shrinkDelegate;
 
 @end

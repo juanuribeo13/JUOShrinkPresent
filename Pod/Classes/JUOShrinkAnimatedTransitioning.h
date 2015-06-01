@@ -6,10 +6,13 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "JUOShrinkTransitioningDelegate.h"
+
 @interface JUOShrinkAnimatedTransitioning : NSObject <UIViewControllerAnimatedTransitioning>
+
+@property (weak, nonatomic) id<JUOShrinkDelegate> shrinkDelegate;
 
 @property (nonatomic) BOOL isPresentation;
 

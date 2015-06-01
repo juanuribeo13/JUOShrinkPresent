@@ -8,7 +8,7 @@
 
 #import "JUOShrinkPresentationController.h"
 
-#define topSpace 40
+#define defaultTopSpace 40
 
 @interface JUOShrinkPresentationController()
 
@@ -80,6 +80,14 @@
 	
 	CGRect frame = CGRectZero;
 	CGRect containerBounds = self.containerView.bounds;
+	
+	CGFloat topSpace;
+	
+	if (self.shrinkDelegate && [self.shrinkDelegate respondsToSelector:@selector(topSpace)]) {
+		topSpace = [self.shrinkDelegate topSpace];
+	} else {
+		topSpace = defaultTopSpace;
+	}
 	
 	frame.size = CGSizeMake(containerBounds.size.width, containerBounds.size.height - topSpace);
 	frame.origin = CGPointMake(0, topSpace);

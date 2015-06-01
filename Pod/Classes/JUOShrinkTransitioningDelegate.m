@@ -27,11 +27,19 @@
 	return self;
 }
 
+- (void)setShrinkDelegate:(id<JUOShrinkDelegate>)shrinkDelegate {
+	
+	_shrinkDelegate = shrinkDelegate;
+	self.animationController.shrinkDelegate = shrinkDelegate;
+}
+
 - (UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented
 													  presentingViewController:(UIViewController *)presenting
 														  sourceViewController:(UIViewController *)source {
 	
-	return [[JUOShrinkPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+	JUOShrinkPresentationController *presentationController = [[JUOShrinkPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+	presentationController.shrinkDelegate = self.shrinkDelegate;
+	return presentationController;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented

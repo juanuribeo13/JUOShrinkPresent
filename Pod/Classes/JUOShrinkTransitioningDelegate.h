@@ -6,9 +6,20 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+@protocol JUOShrinkDelegate <NSObject>
+
+@optional
+- (NSTimeInterval)transitionDuration;
+- (CGFloat)shrinkScale;
+- (CGFloat)topSpace;
+- (CGColorRef)presentedWindowColor;
+
+@end
+
 @interface JUOShrinkTransitioningDelegate : NSObject <UIViewControllerTransitioningDelegate>
+
+@property (weak, nonatomic) id<JUOShrinkDelegate> shrinkDelegate;
 
 @end

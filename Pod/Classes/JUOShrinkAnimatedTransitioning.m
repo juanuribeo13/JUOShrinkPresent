@@ -8,14 +8,26 @@
 
 #import "JUOShrinkAnimatedTransitioning.h"
 
-#define animationDuration 0.5
-#define shrinkScale 0.93
+#define defaultAnimationDuration 0.5
+#define defaultShrinkScale 0.93
+
+@interface JUOShrinkAnimatedTransitioning()
+
+@property CGColorRef windowColor;
+
+@end
+
 
 @implementation JUOShrinkAnimatedTransitioning
 
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
 	
-	return animationDuration;
+	if (self.shrinkDelegate && [self.shrinkDelegate respondsToSelector:@selector(transitionDuration)]) {
+		
+		return [self.shrinkDelegate transitionDuration];
+	}
+	
+	return defaultAnimationDuration;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
@@ -48,8 +60,18 @@
 		
 		foreVC.view.frame = finalFrame;
 		
+		CGFloat shrinkScale;
+		
+		if (self.shrinkDelegate && [self.shrinkDelegate respondsToSelector:@selector(shrinkScale)]) {
+			shrinkScale = [self.shrinkDelegate shrinkScale];
+		} else {
+			shrinkScale = defaultShrinkScale;
+		}
+		
 		CGFloat scale = isPresentation ? shrinkScale : 1;
 		backVC.view.transform = CGAffineTransformScale(CGAffineTransformIdentity, scale, scale);
+		
+		[self changeWindowBackgroundIfNeeded];
 		
 	} completion:^(BOOL finished) {
 		
@@ -60,6 +82,22 @@
 		
 		[transitionContext completeTransition:YES];
 	}];
+}
+
+- (void)changeWindowBackgroundIfNeeded {
+	
+	if (self.shrinkDelegate && [self.shrinkDelegate respondsToSelector:@selector(presentedWindowColor)]) {
+		
+		id<UIApplicationDelegate> appDelegate = [[UIApplication sharedApplication] delegate];
+		
+		if (self.isPresentation) {
+			
+			self.windowColor = [appDelegate window].layer.backgroundColor;
+			[appDelegate window].layer.backgroundColor = [self.shrinkDelegate presentedWindowColor];
+		} else {
+			[appDelegate window].layer.backgroundColor = self.windowColor;
+		}
+	}
 }
 
 @end
