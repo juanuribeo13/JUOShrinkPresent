@@ -37,7 +37,11 @@
 	
 	if (gesture.state == UIGestureRecognizerStateRecognized) {
 		
-		[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+		if (self.shrinkDelegate && [self.shrinkDelegate respondsToSelector:@selector(backViewTapped)]) {
+			[self.shrinkDelegate backViewTapped];
+		} else {
+			[self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+		}
 	}
 }
 

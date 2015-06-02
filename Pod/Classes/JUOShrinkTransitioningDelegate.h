@@ -15,6 +15,14 @@
 - (CGFloat)shrinkScale;
 - (CGFloat)topSpace;
 - (CGColorRef)presentedWindowColor;
+/**
+ *
+ *	This method is called when the view that stays in the back is tapped,
+ *	in case you don't implement it, the default action is to dismiss the
+ *	presented ViewController
+ *
+ */
+- (void)backViewTapped;
 
 @end
 
