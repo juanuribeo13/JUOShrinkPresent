@@ -26,9 +26,8 @@
 
 #pragma mark - JUOShrinkDelegate
 
-- (CGColorRef)presentedWindowColor {
-	
-	return [UIColor colorWithRed:0 green:0.2 blue:0 alpha:1].CGColor;
+-(UIColor *)presentedWindowColor {
+	return [UIColor colorWithRed:0 green:0.2 blue:0 alpha:1];
 }
 
 #pragma mark - Navigation

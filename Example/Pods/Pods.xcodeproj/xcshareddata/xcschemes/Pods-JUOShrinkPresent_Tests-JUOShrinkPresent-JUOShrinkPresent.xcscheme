@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F6E24CD8E756B3A1033EF839"
+               BlueprintIdentifier = "32FBDAA146328F5C43E3CEA8"
                BuildableName = "JUOShrinkPresent.bundle"
                BlueprintName = "Pods-JUOShrinkPresent_Tests-JUOShrinkPresent-JUOShrinkPresent"
                ReferencedContainer = "container:Pods.xcodeproj">

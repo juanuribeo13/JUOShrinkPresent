@@ -1,19 +1,19 @@
 {
   "name": "JUOShrinkPresent",
   "version": "0.1.0",
-  "summary": "A short description of JUOShrinkPresent.",
-  "description": "                       An optional longer description of JUOShrinkPresent\n\n                       * Markdown format.\n                       * Don't worry about the indent, we strip it!\n",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/JUOShrinkPresent",
+  "summary": "Custom presentation delegate that shrinks the VC in the back.",
+  "description": "                        JUOShrinkPresent is a custom presentation delegate that shrinks the ViewController\n                        that stays in the back like the mail app does in iOS8 when composing a new email.\n",
+  "homepage": "https://github.com/juanuribeo13/JUOShrinkPresent",
   "license": "MIT",
   "authors": {
     "Juan Uribe": "juanuribeo13@gmail.com.co"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/JUOShrinkPresent.git",
+    "git": "https://github.com/juanuribeo13/JUOShrinkPresent.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
