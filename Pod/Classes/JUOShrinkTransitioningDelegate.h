@@ -14,7 +14,7 @@
 - (NSTimeInterval)transitionDuration;
 - (CGFloat)shrinkScale;
 - (CGFloat)topSpace;
-- (CGColorRef)presentedWindowColor;
+- (UIColor *)presentedWindowColor;
 /**
  *
  *	This method is called when the view that stays in the back is tapped,

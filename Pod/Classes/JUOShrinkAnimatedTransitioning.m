@@ -93,7 +93,7 @@
 		if (self.isPresentation) {
 			
 			self.windowColor = [appDelegate window].layer.backgroundColor;
-			[appDelegate window].layer.backgroundColor = [self.shrinkDelegate presentedWindowColor];
+			[appDelegate window].layer.backgroundColor = [self.shrinkDelegate presentedWindowColor].CGColor;
 		} else {
 			[appDelegate window].layer.backgroundColor = self.windowColor;
 		}
